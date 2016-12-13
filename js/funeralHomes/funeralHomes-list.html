@@ -1,7 +1,13 @@
-<h1>Hello hi this works</h1>
+<h1>Funeral Homes in Your City</h1>
+  <md-select ng-model="someModel" placeholder="Select a city">
+    <md-option ng-value="city" ng-repeat="city in funeralHomeListVm.cities">{{ city }}</md-option>
+  </md-select>
+
 
 <div>
   <ul>
-    <li  ng-repeat="funeralHome in funeralHomeListVm.funeralHomes">{{funeralHome.name}}</li>
+    <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes"><h4>{{funeralHome.name}}</h4>
+      <br>
+    <img src={{funeralHome.location_img_url}}</li>
   </ul>
 </div>

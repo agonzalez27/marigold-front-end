@@ -1,4 +1,5 @@
 (function() {
   'use strict';
-  angular.module('marigold', ['ui.router', 'ngResource'])
+  angular.module('marigold', ['ui.router', 'ngResource', 'ngMaterial'])
+  
 }());

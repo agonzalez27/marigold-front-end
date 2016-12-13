@@ -12,6 +12,7 @@ function FuneralHomeController(FuneralHomeResource) {
 
   var vm = this;
   vm.funeralHomes = [];
+  vm.cities = ['Oxnard']
 
   FuneralHomeResource.query().$promise.then(function(data) {
    vm.funeralHomes = data;
