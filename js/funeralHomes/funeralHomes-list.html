@@ -3,8 +3,8 @@
     <md-option ng-value="city" ng-repeat="city in funeralHomeListVm.cities">{{ city }}</md-option>
   </md-select>
 
-<div>
-  <ul>
+<div id="funeralHomeSearch">
+  <ul id="funeralHomeList">
     <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes | filter:{city: funeralHomeListVm.selectedCity}"><h4>{{funeralHome.name}}</h4></a>
     <br>
     <img ng-src={{funeralHome.location_img_url}}</li>

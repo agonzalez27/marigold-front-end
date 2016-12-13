@@ -28,8 +28,33 @@ body{
 
 }
 
+#funeralHomeShow {
+  text-align: center;
+}
+
+#funeralHomeSearch {
+  text-align: center;
+}
+
+#funeralHomeList {
+  list-style-type: none;
+}
+
+#directCremationShow {
+  text-align: center;
+}
+
+#traditionalCremationShow {
+  text-align: center;
+
+}
+
+#traditionalFuneralShow {
+  text-align: center;
+}
+
 .button {
   background-color: blue;
   font-size: 20px;
-  color: white; 
+  color: white;
 }

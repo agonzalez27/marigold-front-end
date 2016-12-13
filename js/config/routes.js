@@ -26,6 +26,24 @@
         templateUrl: 'js/funeralHomes/funeralHomes-show.html',
         controller: 'FuneralHomeShowController',
         controllerAs: 'funeralHomeShowVm'
+      })
+      .state('directCremationShow', {
+        url: '/directCremationShow/:id',
+        templateUrl: 'js/funeralHomes/funeralHomes-DCShow.html',
+        controller: 'FuneralHomeShowController',
+        controllerAs: 'funeralHomeShowVm'
+      })
+      .state('traditionalCremationShow', {
+        url: '/traditionalCremationShow/:id',
+        templateUrl: 'js/funeralHomes/funeralHomes-TCShow.html',
+        controller: 'FuneralHomeShowController',
+        controllerAs: 'funeralHomeShowVm'
+      })
+      .state('traditionalBurialShow', {
+        url: '/traditionalBurialShow/:id',
+        templateUrl: 'js/funeralHomes/funeralHomes-TBShow.html',
+        controller: 'FuneralHomeShowController',
+        controllerAs: 'funeralHomeShowVm'
       });
   }
 }());
