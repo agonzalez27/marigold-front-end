@@ -5,14 +5,13 @@
 
 <div id="funeralHomeSearch">
   <ul id="funeralHomeList">
-    <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes | filter:{city: funeralHomeListVm.selectedCity}"><h4>{{funeralHome.name}}</h4></a>
-    <br>
+    <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes | filter:{city: funeralHomeListVm.selectedCity}"><h4>{{funeralHome.name}}</h4>
     <img ng-src={{funeralHome.location_img_url}}</li>
     <br>
     <md-button class="button" ui-sref="funeralHomeShow({id: funeralHome._id})">
     More Info
     </md-button>
-
-
   </ul>
 </div>
+<br>
+<br>

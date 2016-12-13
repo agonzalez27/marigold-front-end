@@ -2,22 +2,22 @@
   <h1>{{funeralHomeShowVm.funeralHome.name}}</h1>
   <br>
   <h3>Traditional Burial</h3>
-  <p>Basic Services of the Funeral Director and Staff:  {{funeralHomeShowVm.funeralHome.basic_services_funeral_director}}</p>
-  <p>Embalming:  {{funeralHomeShowVm.funeralHome.embalming}}</p>
-  <p>Dressing and Casketing:  {{funeralHomeShowVm.funeralHome.dressing_casketing}}</p>
-  <p>Visitation:  {{funeralHomeShowVm.funeralHome.visitation}}</p>
-  <p>Funeral Service:  {{funeralHomeShowVm.funeralHome.funeral_service}}</p>
-  <p>Removal:  {{funeralHomeShowVm.funeralHome.removal}}</p>
-  <p>Hearse:  {{funeralHomeShowVm.funeralHome.hearse}}</p>
-  <p>Service Vehicle:  {{funeralHomeShowVm.funeralHome.service_vehicle}}</p>
-  <p>Casket:  {{funeralHomeShowVm.funeralHome.casket}}</p>
-  <p>Register Book:  {{funeralHomeShowVm.funeralHome.register_book}}</p>
-  <p>Prayer Cards:  {{funeralHomeShowVm.funeralHome.prayer_cards}}</p>
-  <h4>Traditional Burial Total Cost:  {{funeralHomeShowVm.funeralHome.traditional_burial_total_cost}}</h4>
+  <p>Basic Services of the Funeral Director and Staff:  {{funeralHomeShowVm.funeralHome.basic_services_funeral_director| currency}}</p>
+  <p>Embalming:  {{funeralHomeShowVm.funeralHome.embalming | currency}}</p>
+  <p>Dressing and Casketing:  {{funeralHomeShowVm.funeralHome.dressing_casketing | currency}}</p>
+  <p>Visitation:  {{funeralHomeShowVm.funeralHome.visitation | currency}}</p>
+  <p>Funeral Service:  {{funeralHomeShowVm.funeralHome.funeral_service | currency}}</p>
+  <p>Removal:  {{funeralHomeShowVm.funeralHome.removal | currency}}</p>
+  <p>Hearse:  {{funeralHomeShowVm.funeralHome.hearse | currency}}</p>
+  <p>Service Vehicle:  {{funeralHomeShowVm.funeralHome.service_vehicle | currency}}</p>
+  <p>Casket:  {{funeralHomeShowVm.funeralHome.casket | currency}}</p>
+  <p>Register Book:  {{funeralHomeShowVm.funeralHome.register_book | currency}}</p>
+  <p>Prayer Cards:  {{funeralHomeShowVm.funeralHome.prayer_cards | currency}}</p>
+  <h4>Traditional Burial Total Cost:  {{funeralHomeShowVm.funeralHome.traditional_burial_total_cost | currency}}</h4>
 
   <md-button class="button" ui-sref="funeralHomeShow({id: funeralHomeShowVm.funeralHome._id})">
   Back
   </md-button>
 
-  <h6>These prices do not include cemetery property and services.</h6>
+  <h4>These prices do not include the cost cemetery property and services.</h4>
 </div>

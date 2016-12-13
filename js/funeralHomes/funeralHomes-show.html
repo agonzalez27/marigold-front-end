@@ -3,7 +3,7 @@
 <h1>{{funeralHomeShowVm.funeralHome.name}}</h1>
 <p>{{funeralHomeShowVm.funeralHome.street}}
   <br>
-   {{funeralHomeShowVm.funeralHome.city}} {{funeralHomeShowVm.funeralHome.state}}, {{funeralHomeShowVm.funeralHome.zip}}
+   {{funeralHomeShowVm.funeralHome.city}}, {{funeralHomeShowVm.funeralHome.state}} {{funeralHomeShowVm.funeralHome.zip}}
    <br>
   Phone:  {{funeralHomeShowVm.funeralHome.phone}} | Fax:  {{funeralHomeShowVm.funeralHome.fax}}
   <br>
@@ -12,21 +12,21 @@
 <span><img ng-src={{funeralHomeShowVm.funeralHome.location_img_url}}</span>
 <br>
 <span>
-<h3>Direct Cremation Total Cost:  {{funeralHomeShowVm.funeralHome.direct_cremation_total_cost}}</h3>
+<h3>Direct Cremation Total Cost: {{ funeralHomeShowVm.funeralHome.direct_cremation_total_cost | currency }} </h3>
 <md-button class="button" ui-sref="directCremationShow({id: funeralHomeShowVm.funeralHome._id})">
   Itemized Pricing
 </md-button>
 </span>
 
 <span>
-<h3>Traditional Cremation Total Cost:  {{funeralHomeShowVm.funeralHome.traditional_cremation_total_cost}}</h3>
+<h3>Traditional Cremation Total Cost:  {{funeralHomeShowVm.funeralHome.traditional_cremation_total_cost| currency}}</h3>
 <md-button class="button" ui-sref="traditionalCremationShow({id: funeralHomeShowVm.funeralHome._id})">
   Itemized Pricing
 </md-button>
 </span>
 
 <span>
-<h3>Traditional Burial Total Cost:  {{funeralHomeShowVm.funeralHome.traditional_burial_total_cost}}</h3>
+<h3>Traditional Burial Total Cost:  {{funeralHomeShowVm.funeralHome.traditional_burial_total_cost | currency}}</h3>
 <md-button class="button" ui-sref="traditionalBurialShow({id: funeralHomeShowVm.funeralHome._id})">
   Itemized Pricing
 </md-button>
@@ -35,6 +35,9 @@
 <br>
 <br>
 <div>
+    <h4>These prices do not include the cost cemetery property and services.</h4>
+<br>
+<br>
 <md-button class="button" ui-sref="funeralHomesList">
   Back
 </md-button>
