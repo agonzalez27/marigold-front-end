@@ -3,49 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>MARIGOLD.Life</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">MARIGOLD.Life</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div layout="column" layout-fill>
+    <md-toolbar>
 
-    <div id="mainWrapper">
-      <div id="infoDiv">
-        <h3>Welcome</h3>
-        <h5>You are probably visiting our site beacause a loved one has either passed away or is close to passing away. We are here to assist you during this difficult time.  Before you continue, please read all of the bullet points below</h5>
-        <ul>
-          <li>
-            <p>MARIGOLD.Life is an informational site only.  we provide information to as accurately as we can obtain it.  Some of the information you'll find on our site is: estimated prices, reviews, and general information on funeral home establishments in your city.</p>
-          </li>
-          <li>
-            <p>MARIGOLD.Life only provides information on funeral home services not cemetery property and services.  It's important to know that these are two seperate things.  Cemetery pricing is a bit more complex and less accessible than funeral home pricing which is why we don't offer it at this time.</p>
-          </li>
-          <li>
-            <p>MARIGOLD.Life provides raw pricing not taking into consideration package discounts.  There are many times where funeral homes offer packages which include a discount.  In order to find out what the packages and discounts are, it's important for you to contact the local funeral home directly.  Ultimately, the only way to get an accurate price is with a contract.  Prices fluctuate and only by sigining a contract will your prices be guaranteed.</p>
-          </li>
-        </ul>
-        <a class="waves-effect waves-light btn-large">Get Started</a>
+      <div class="md-toolbar-tools">
+        <md-button class="button" ui-sref="home">MARIGOLD.Life</md-button>
+
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+
+        <md-button class="button" ui-sref="funeralHomesList">
+          Search
+        </md-button>
       </div>
-    </div>
+
+    </md-toolbar>
+    <md-content class="content">
+      <div ui-view></div>
+    </md-content>
+  </div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
-    <script src="js/app.js"></script>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+
+
+    <script src="js/app.js"></script>
+    <script src="js/config/routes.js"></script>
+    <script src="js/funeralHomes/funeralHomes.controllers.js"></script>
+    <script src="js/funeralHomes/funeralHome.resource.js"></script>
   </body>
 </html>

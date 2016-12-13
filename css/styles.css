@@ -1,8 +1,11 @@
-body {
+body{
+  background-color: rgb(249,246,201);
+}
+.content {
   background-color: rgb(249,246,201);
 }
 
-.nav-wrapper {
+#navBar {
   background-color: rgb(173,216,230);
 }
 
@@ -23,4 +26,35 @@ body {
   display: inline-block;
   padding: 10px;
 
+}
+
+#funeralHomeShow {
+  text-align: center;
+}
+
+#funeralHomeSearch {
+  text-align: center;
+}
+
+#funeralHomeList {
+  list-style-type: none;
+}
+
+#directCremationShow {
+  text-align: center;
+}
+
+#traditionalCremationShow {
+  text-align: center;
+
+}
+
+#traditionalFuneralShow {
+  text-align: center;
+}
+
+.button {
+  background-color: blue;
+  font-size: 20px;
+  color: white;
 }
