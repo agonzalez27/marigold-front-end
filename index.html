@@ -7,11 +7,27 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <md-nav-bar id="navBar" md-selected-nav-item="currentNavItem">
-      <md-nav-item md-nav-click="goto('home')" name="home" ui-sref="home">MARIGOLD.Life</md-nav-item>
-    </md-nav-bar>
+    <div layout="column" layout-fill>
+    <md-toolbar>
 
-    <div ui-view></div>
+      <div class="md-toolbar-tools">
+        <md-button class="button" ui-sref="home">MARIGOLD.Life</md-button>
+
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+
+        <md-button class="button">
+          Right Bar Button
+        </md-button>
+      </div>
+
+    </md-toolbar>
+    <md-content class="content">
+      <div ui-view></div>
+    </md-content>
+  </div>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>

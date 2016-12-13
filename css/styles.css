@@ -1,4 +1,7 @@
-body {
+body{
+  background-color: rgb(249,246,201);
+}
+.content {
   background-color: rgb(249,246,201);
 }
 
@@ -25,6 +28,8 @@ body {
 
 }
 
-#button {
-  background-color: green;
+.button {
+  background-color: blue;
+  font-size: 20px;
+  color: white; 
 }
