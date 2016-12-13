@@ -1,13 +1,18 @@
-<h1>Funeral Homes in Your City</h1>
-  <md-select ng-model="someModel" placeholder="Select a city">
+<h1>Select A City</h1>
+  <md-select ng-model="funeralHomeListVm.selectedCity" placeholder="Select a city">
     <md-option ng-value="city" ng-repeat="city in funeralHomeListVm.cities">{{ city }}</md-option>
   </md-select>
 
-
 <div>
   <ul>
-    <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes"><h4>{{funeralHome.name}}</h4>
-      <br>
-    <img src={{funeralHome.location_img_url}}</li>
+    <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes | filter:{city: funeralHomeListVm.selectedCity}"><h4>{{funeralHome.name}}</h4></a>
+    <br>
+    <img ng-src={{funeralHome.location_img_url}}</li>
+    <br>
+    <md-button class="button" ui-sref="funeralHomeShow({id: funeralHome._id})">
+    More Info
+    </md-button>
+
+
   </ul>
 </div>

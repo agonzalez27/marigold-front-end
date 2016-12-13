@@ -12,7 +12,8 @@ function FuneralHomeController(FuneralHomeResource) {
 
   var vm = this;
   vm.funeralHomes = [];
-  vm.cities = ['Oxnard']
+  vm.cities = ['Oxnard', 'Santa Paula']
+  vm.selectedCity = 'No City Selected'
 
   FuneralHomeResource.query().$promise.then(function(data) {
    vm.funeralHomes = data;
@@ -20,8 +21,12 @@ function FuneralHomeController(FuneralHomeResource) {
 }
 
 function FuneralHomeShowController(FuneralHomeResource, $stateParams){
+  var vm = this;
+  vm.funeralHome = {}
+
   FuneralHomeResource.get({id: $stateParams.id}).$promise.then(function(jsonFuneralHome) {
     vm.funeralHome = jsonFuneralHome;
+    console.log(vm.funeralHome)
   });
 }
 

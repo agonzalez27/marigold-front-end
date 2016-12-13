@@ -20,6 +20,12 @@
         templateUrl: 'js/funeralHomes/funeralHomes-list.html',
         controller: 'FuneralHomeController',
         controllerAs: 'funeralHomeListVm'
+      })
+      .state('funeralHomeShow', {
+        url: '/funeralHomes/:id',
+        templateUrl: 'js/funeralHomes/funeralHomes-show.html',
+        controller: 'FuneralHomeShowController',
+        controllerAs: 'funeralHomeShowVm'
       });
   }
 }());
