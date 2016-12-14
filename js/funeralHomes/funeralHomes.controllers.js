@@ -4,11 +4,11 @@
   .controller('FuneralHomeController', FuneralHomeController)
   .controller('FuneralHomeShowController', FuneralHomeShowController)
 
-FuneralHomeController.$inject = ['FuneralHomeResource'];
+FuneralHomeController.$inject = ['FuneralHomeResource', '$http'];
 FuneralHomeShowController.$inject = ['FuneralHomeResource', '$stateParams', '$http'];
 
 
-function FuneralHomeController(FuneralHomeResource) {
+function FuneralHomeController(FuneralHomeResource, $http) {
 
   var vm = this;
   vm.funeralHomes = [];
