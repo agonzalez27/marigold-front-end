@@ -44,6 +44,12 @@
         templateUrl: 'js/funeralHomes/funeralHomes-TBShow.html',
         controller: 'FuneralHomeShowController',
         controllerAs: 'funeralHomeShowVm'
+      })
+      .state('contactForm', {
+        url: '/contactForm/:id',
+        templateUrl: 'js/funeralHomes/funeralHomes-Contact.html',
+        controller: 'ContactFormController',
+        controllerAs: 'contactFormVm'
       });
   }
 }());
