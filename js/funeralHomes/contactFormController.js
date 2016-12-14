@@ -1,13 +1,14 @@
 'use strict';
+//This code was apdapted from http://www.bossable.com/1910/angularjs-nodemailer-contact-form/
 
 angular.module('marigold')
 .controller('ContactFormController', ContactFormController)
 
-ContactFormController.$inject = ['$http', '$mdToast', '$animate', '$stateParams']
+ContactFormController.$inject = ['$http', '$mdToast', '$animate', '$stateParams', '$state']
 
-function ContactFormController ($http, $mdToast, $animate, $stateParams) {
+function ContactFormController ($http, $mdToast, $animate, $stateParams, $state) {
   var vm = this;
-  var _id = $stateParams.id
+  vm.id = $stateParams.id
 
 // Expose view variables
 
@@ -31,7 +32,7 @@ function ContactFormController ($http, $mdToast, $animate, $stateParams) {
                 contactName : vm.contactName,
                 contactEmail : vm.contactEmail,
                 contactMsg : vm.contactMsg,
-                id : _id
+                id : vm.id
             });
             console.log(data)
             // Simple POST request example (passing data) :
@@ -39,10 +40,10 @@ function ContactFormController ($http, $mdToast, $animate, $stateParams) {
                 success(function(data, status, headers, config) {
                     // vm callback will be called asynchronously
                     // when the response is available
-
+                    $state.go('funeralHomeShow', {id: vm.id })
                     $mdToast.show(
                         $mdToast.simple()
-                            .content('Thanks for your message ' + data.contactName + ' You Rock!')
+                            .content('Thanks for your message ' + data.contactName + "."  + "  If the provider doesn't respond in 24 hours, please contact them directly.")
                             .position(vm.getToastPosition())
                             .hideDelay(5000)
                     );

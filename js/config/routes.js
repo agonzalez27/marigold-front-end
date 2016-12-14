@@ -50,6 +50,10 @@
         templateUrl: 'js/funeralHomes/funeralHomes-Contact.html',
         controller: 'ContactFormController',
         controllerAs: 'contactFormVm'
+      })
+      .state('about', {
+        url:'/about/',
+        templateUrl: 'js/funeralHomes/about.html'
       });
   }
 }());
