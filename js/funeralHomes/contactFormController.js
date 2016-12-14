@@ -3,10 +3,12 @@
 angular.module('marigold')
 .controller('ContactFormController', ContactFormController)
 
-ContactFormController.$inject = ['$http', '$mdToast', '$animate']
+ContactFormController.$inject = ['$http', '$mdToast', '$animate', '$stateParams']
 
-function ContactFormController ($http, $mdToast, $animate) {
+function ContactFormController ($http, $mdToast, $animate, $stateParams) {
   var vm = this;
+  var _id = $stateParams.id
+
 // Expose view variables
 
       vm.toastPosition = {
@@ -28,7 +30,8 @@ function ContactFormController ($http, $mdToast, $animate) {
             var data = ({
                 contactName : vm.contactName,
                 contactEmail : vm.contactEmail,
-                contactMsg : vm.contactMsg
+                contactMsg : vm.contactMsg,
+                id : _id
             });
             console.log(data)
             // Simple POST request example (passing data) :

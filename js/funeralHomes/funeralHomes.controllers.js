@@ -26,7 +26,6 @@ function FuneralHomeShowController(FuneralHomeResource, $stateParams){
 
   FuneralHomeResource.get({id: $stateParams.id}).$promise.then(function(jsonFuneralHome) {
     vm.funeralHome = jsonFuneralHome;
-    console.log(vm.funeralHome)
   });
 }
 
