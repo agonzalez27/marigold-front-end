@@ -1,10 +1,25 @@
 body{
-  background-color: rgb(249,246,201);
+  background: url('http://i.imgur.com/s3k0Tx9.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ color: rgba(238, 187, 80, .9);
 }
 .content {
-  background-color: rgb(249,246,201);
+  background-color: transparent;
 }
+
+#toolbar {
+  background-color: rgba(235, 144, 28, .5);
+}
+
 #marigoldLife {
+  background-color: transparent;
+  color: rgba(185, 61, 1, .8);
+  font-size: 30px;
+  font-family: 'Archivo Black', sans-serif;
+
 
 }
 #navBar {
@@ -20,22 +35,61 @@ body{
 
 #infoDiv {
   text-align: center;
-  background-color: rgb(173,216,230);
+  background-color: rgba(185, 61, 1, .7);
   width: 600px;
   /*border: 2px solid black;*/
   display: inline-block;
   padding: 10px;
   border-top: 20px;
   list-style-type: none;
+  color: rgba(238, 187, 80, .9);
+  font-size: 20px;
 
 }
 
+h1 {
+  color: rgba(238, 187, 80, .9);
+  font-size: 40px;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+p, h2, h3, h4 {
+  font-family: 'Neuton', serif;
+}
+
+.container1 {
+  background-color: rgba(185, 61, 1, .7);
+  color: rgba(238, 187, 80, .9);
+
+}
+
+.outerContainerWrapper {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.innerContainer {
+  background-color: rgba(185, 61, 1, .7);
+  color: rgba(238, 187, 80, .9);
+  text-align: center;
+  width: 500px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+
+}
 #funeralHomeShow {
   text-align: center;
 }
 
 #funeralHomeSearch {
   text-align: center;
+  width: 500px;
+  text-align: center;
+  display: inline-block;
+
+
 }
 
 #funeralHomeList {
@@ -43,9 +97,6 @@ body{
   font-size: 30px;
 }
 
-#directCremationShow {
-  text-align: center;
-}
 
 #traditionalCremationShow {
   text-align: center;
@@ -57,7 +108,14 @@ body{
 }
 
 .button {
-  background-color: blue;
+  background-color: rgba(146, 114, 93, .9);
   font-size: 20px;
-  color: white;
+  color: rgba(238, 187, 80, .9);
 }
+
+/*colors
+dark = rgba(185, 61, 1, .8)
+light = rgba(235, 144, 28, .5)
+really light = rgba(238, 187, 80, .9)
+dark gray = rgba(50, 46, 37, .8)
+brown = rgba(146, 114, 93, .8)*/

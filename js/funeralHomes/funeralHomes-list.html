@@ -1,9 +1,11 @@
+<div class="container1">
 <h1>Select A City</h1>
+</div>
   <md-select ng-model="funeralHomeListVm.selectedCity" placeholder="Select a city">
     <md-option ng-value="city" ng-repeat="city in funeralHomeListVm.cities">{{ city }}</md-option>
   </md-select>
-
-<div id="funeralHomeSearch">
+<div class="outerContainerWrapper">
+<div id="funeralHomeSearch" class="container1">
   <ul id="funeralHomeList">
     <li ng-repeat="funeralHome in funeralHomeListVm.funeralHomes | filter:{city: funeralHomeListVm.selectedCity}"><h4>{{funeralHome.name}}</h4>
     <img ng-src={{funeralHome.location_img_url}}</li>
@@ -12,6 +14,7 @@
     More Info
     </md-button>
   </ul>
+</div>
 </div>
 <br>
 <br>
