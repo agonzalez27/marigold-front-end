@@ -6,6 +6,6 @@
   FuneralHomeResource.$inject = ['$resource'];
 
   function FuneralHomeResource($resource) {
-    return $resource('http://localhost:3000/api/funeralHomes/:id', {id: '@_id'}, { 'update': { method: 'PATCH'}})
+    return $resource('https://marigold-api.herokuapp.com/api/funeralHomes/:id', {id: '@_id'}, { 'update': { method: 'PATCH'}})
   }
 }());

@@ -36,7 +36,7 @@ function ContactFormController ($http, $mdToast, $animate, $stateParams, $state)
             });
             console.log(data)
             // Simple POST request example (passing data) :
-            $http.post('http://localhost:3000/api/email', data).
+            $http.post('https://marigold-api.herokuapp.com/api/email', data).
                 success(function(data, status, headers, config) {
                     // vm callback will be called asynchronously
                     // when the response is available
