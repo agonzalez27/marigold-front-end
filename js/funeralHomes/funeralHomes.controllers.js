@@ -31,7 +31,7 @@ function FuneralHomeShowController(FuneralHomeResource, $stateParams, $http){
   }).then(function() {
     $http({
     method: 'GET',
-    url: 'http://localhost:3000/api/yelp/' + vm.funeralHome.yelpId
+    url: 'https://marigold-api.herokuapp.com/api/yelp/' + vm.funeralHome.yelpId
     }).then(function successCallback(yelpData) {
     vm.yelp = yelpData.data;
     }, function errorCallback(response) {
