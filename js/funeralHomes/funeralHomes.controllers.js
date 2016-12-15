@@ -24,10 +24,23 @@ function FuneralHomeController(FuneralHomeResource, $http) {
 function FuneralHomeShowController(FuneralHomeResource, $stateParams, $http){
   var vm = this;
   vm.funeralHome = {}
+  vm.yelp = {}
 
   FuneralHomeResource.get({id: $stateParams.id}).$promise.then(function(jsonFuneralHome) {
     vm.funeralHome = jsonFuneralHome;
-  });
+  }).then(function() {
+    $http({
+    method: 'GET',
+    url: 'http://localhost:3000/api/yelp/' + vm.funeralHome.yelpId
+    }).then(function successCallback(yelpData) {
+    vm.yelp = yelpData.data;
+    }, function errorCallback(response) {
+      console.log(response)
+    });
+  })
+
+
+
 }
 
 }());
